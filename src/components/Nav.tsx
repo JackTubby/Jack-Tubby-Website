@@ -1,9 +1,11 @@
-import { Link } from "react-router-dom"
+import { Link } from 'react-router-dom'
 
 const Nav = () => {
   return (
     <nav className="flex justify-between items-center py-8">
-      <h1 className="text-lg font-bold">Jack Tubby</h1>
+      <Link to="/" className="text-lg font-bold">
+        Jack Tubby
+      </Link>
       <ul className="flex gap-x-8">
         <li className="hover:text-purple-600 hover:underline hover:underline-offset-6">
           <Link to="/">Home</Link>
