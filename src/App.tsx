@@ -15,16 +15,16 @@ function App() {
           <h1 className="text-lg font-bold">Jack Tubby</h1>
           <ul className="flex gap-x-8">
             <li className="hover:text-purple-600 hover:underline hover:underline-offset-6">
-              <a href="">Home</a>
+              <a href="/">Home</a>
             </li>
             <li className="hover:text-purple-600 hover:underline hover:underline-offset-6">
-              <a href="">Works</a>
+              <a href="/about">About</a>
             </li>
             <li className="hover:text-purple-600 hover:underline hover:underline-offset-6">
-              <a href="">Services</a>
+              <a href="/projects">Projects</a>
             </li>
             <li className="hover:text-purple-600 hover:underline hover:underline-offset-6">
-              <a href="">Contact</a>
+              <a href="/contact">Contact</a>
             </li>
           </ul>
           <a href="#" className="bg-purple-600 px-8 py-2 text-lg text-white rounded-2xl shadow-2xl">
@@ -41,7 +41,7 @@ function App() {
             </p>
           </div>
           <div className="w-1/2">
-            <div className="flex flex-col gap-y-6 justify-center items-center">
+            <div className="flex flex-col gap-y-6 justify-end items-end">
               <div className="cursor-pointer">
                 <img
                   src="https://picsum.photos/200"
@@ -51,7 +51,7 @@ function App() {
                 <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
                 <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">About Me</div>
               </div>
-              <div className="ml-20 cursor-pointer">
+              <div className="mr-20 cursor-pointer">
                 <img
                   src="https://picsum.photos/200"
                   alt=""
