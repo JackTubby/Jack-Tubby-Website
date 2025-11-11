@@ -33,7 +33,11 @@ function About() {
       <section>
         <div className="flex items-center gap-x-8">
           <div>
-            <img src="/me.png" alt="Jack Tubby Avatar" className="border-4 border-white rounded-xl" />
+            <img
+              src={`${import.meta.env.BASE_URL}me.png`}
+              alt="Jack Tubby Avatar"
+              className="border-4 border-white rounded-xl"
+            />{' '}
           </div>
           <div className="flex flex-col gap-y-2">
             <h1 className="mb-4 text-3xl">About Me</h1>
