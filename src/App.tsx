@@ -3,6 +3,8 @@ import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import Nav from './components/Nav'
 import { ArrowFatLineDownIcon, CodeIcon, EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
+import { FolderGit2, Pen, PersonStanding } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 function App() {
   const [position, setPosition] = useState({ x: 100, y: 100 })
@@ -53,33 +55,33 @@ function App() {
           </div>
           <div className="w-1/2">
             <div className="flex flex-col gap-y-6 justify-end items-end">
-              <div className="cursor-pointer">
-                <img
-                  src="https://picsum.photos/200"
-                  alt=""
-                  className="w-[200px] h-[100px] border-4 border-white rounded-xl"
-                />
-                <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
-                <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">About Me</div>
-              </div>
-              <div className="mr-20 cursor-pointer">
-                <img
-                  src="https://picsum.photos/200"
-                  alt=""
-                  className="w-[200px] h-[100px] border-4 border-white rounded-xl"
-                />
-                <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
-                <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">Projects</div>
-              </div>
-              <div className="cursor-pointer">
-                <img
-                  src="https://picsum.photos/200"
-                  alt=""
-                  className="w-[200px] h-[100px] border-4 border-white rounded-xl"
-                />
-                <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
-                <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">Contact</div>
-              </div>
+              <Link to="/about">
+                <div className="cursor-pointer hover:text-purple-600 hover:font-semibold">
+                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center">
+                    <PersonStanding size={40} />
+                  </div>
+                  <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
+                  <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">About Me</div>
+                </div>
+              </Link>
+              <Link to="/projects">
+                <div className="mr-20 cursor-pointer hover:text-purple-600 hover:font-semibold">
+                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center">
+                    <FolderGit2 size={40} />
+                  </div>
+                  <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
+                  <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">Projects</div>
+                </div>
+              </Link>
+              <Link to="/contact">
+                <div className="cursor-pointer hover:text-purple-600 hover:font-semibold">
+                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center">
+                    <Pen size={40} />
+                  </div>
+                  <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
+                  <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">Contact</div>
+                </div>
+              </Link>
             </div>
           </div>
         </section>
