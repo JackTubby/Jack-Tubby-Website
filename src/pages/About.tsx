@@ -1,7 +1,7 @@
 import '../App.css'
 import Nav from '../components/Nav'
 import { EnvelopeIcon, LinkedinLogoIcon, GithubLogoIcon } from '@phosphor-icons/react'
-import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
+import { Tooltip, TooltipContent, TooltipTrigger } from '../components/ui/tooltip'
 
 function About() {
   const events = [
