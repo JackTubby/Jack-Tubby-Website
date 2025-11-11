@@ -9,7 +9,7 @@ import Contact from './pages/Contact.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename='/Jack-Tubby-Website'>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/about" element={<About />} />
