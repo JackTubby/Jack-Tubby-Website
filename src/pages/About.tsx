@@ -1,6 +1,7 @@
-import { EnvelopeIcon, LinkedinLogoIcon, GithubLogoIcon } from '@phosphor-icons/react'
 import '../App.css'
 import Nav from '../components/Nav'
+import { EnvelopeIcon, LinkedinLogoIcon, GithubLogoIcon } from '@phosphor-icons/react'
+import { Tooltip, TooltipContent, TooltipTrigger } from '@/components/ui/tooltip'
 
 function About() {
   const events = [
@@ -36,29 +37,99 @@ function About() {
           </div>
           <div className="flex flex-col gap-y-2">
             <h1 className="mb-4 text-3xl">About Me</h1>
-            <h5 className='font-semibold text-lg'>Jack Tubby</h5>
+            <h5 className="font-semibold text-lg">Jack Tubby</h5>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus porro, tempora sapiente aliquam harum
               itaque architecto officiis, hic beatae assumenda mollitia doloribus quos dignissimos quo voluptas vero at
               impedit neque maxime. Ea, tenetur. Suscipit debitis corporis voluptate mollitia cum, non amet hic. Eaque
               culpa odit alias, veritatis aliquam doloribus beatae.
             </p>
-            <h5 className='font-semibold text-lg'>Technologies I work with</h5>
-            <div className='flex gap-x-2'>
-              <i className="devicon-typescript-plain text-4xl"></i>
-              <i className="devicon-php-plain text-4xl"></i>
-              <i className="devicon-go-original-wordmark text-4xl"></i>
-              <i className="devicon-nodejs-plain-wordmark text-4xl"></i>
-              <i className="devicon-googlecloud-plain text-4xl"></i>
-              <i className="devicon-digitalocean-original-wordmark text-4xl"></i>
-              <i className="devicon-git-plain text-4xl"></i>
-              <i className="devicon-github-original text-4xl"></i>
-              <i className="devicon-prisma-original-wordmark text-4xl"></i>
-              <i className="devicon-mysql-plain-wordmark text-4xl"></i>
-              <i className="devicon-postgresql-plain text-4xl"></i>
-              <i className="devicon-jest-plain text-4xl"></i>
-              <i className="devicon-tailwindcss-original text-4xl"></i>
-              <i className="devicon-react-original text-4xl"></i>
+            <h5 className="font-semibold text-lg">Technologies I work with</h5>
+            <div className="flex gap-x-2 mb-2">
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-typescript-plain text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>TypeScript</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-php-plain text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>PHP</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-go-original-wordmark text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Go</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-nodejs-plain-wordmark text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Node.js</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-googlecloud-plain text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Google Cloud</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-digitalocean-original-wordmark text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>DigitalOcean</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-git-plain text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Git</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-github-original text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>GitHub</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-prisma-original-wordmark text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Prisma</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-mysql-plain-wordmark text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>MySQL</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-postgresql-plain text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>PostgreSQL</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-jest-plain text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Jest</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-tailwindcss-original text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>Tailwind CSS</TooltipContent>
+              </Tooltip>
+              <Tooltip>
+                <TooltipTrigger>
+                  <i className="devicon-react-original text-4xl"></i>
+                </TooltipTrigger>
+                <TooltipContent>React</TooltipContent>
+              </Tooltip>
             </div>
             <div>
               <ul className="flex gap-x-4">
