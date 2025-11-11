@@ -57,7 +57,7 @@ function App() {
             <div className="flex flex-col gap-y-6 justify-end items-end">
               <Link to="/about">
                 <div className="cursor-pointer hover:text-purple-600 hover:font-semibold">
-                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center">
+                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center bg-gray-100">
                     <PersonStanding size={40} />
                   </div>
                   <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
@@ -66,7 +66,7 @@ function App() {
               </Link>
               <Link to="/projects">
                 <div className="mr-20 cursor-pointer hover:text-purple-600 hover:font-semibold">
-                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center">
+                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center bg-gray-100">
                     <FolderGit2 size={40} />
                   </div>
                   <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
@@ -75,7 +75,7 @@ function App() {
               </Link>
               <Link to="/contact">
                 <div className="cursor-pointer hover:text-purple-600 hover:font-semibold">
-                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center">
+                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center bg-gray-100">
                     <Pen size={40} />
                   </div>
                   <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
