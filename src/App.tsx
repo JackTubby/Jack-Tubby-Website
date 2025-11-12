@@ -56,49 +56,46 @@ function App() {
             </p>
           </div>
           <div className="w-1/2">
-            <div className="flex flex-col gap-y-6 justify-end items-end">
-              <Link to="/about">
-                <motion.div
-                  className="cursor-pointer transition-all duration-500 ease-out hover:text-teal-500 hover:font-semibold"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center bg-gray-100 transition-all duration-500 ease-out hover:border-teal-500">
-                    <PersonStanding size={40} className="text-teal-500" />
-                  </div>
-                  <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
-                  <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">About Me</div>
-                </motion.div>
-              </Link>
+<div className="flex flex-col gap-y-8 justify-end items-end">
+  <Link to="/about">
+    <motion.div
+      className="group cursor-pointer"
+      whileHover={{ scale: 1.05, y: -8 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+        <PersonStanding size={48} className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg" />
+        <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">About Me</span>
+      </div>
+    </motion.div>
+  </Link>
 
-              <Link to="/projects">
-                <motion.div
-                  className="mr-20 cursor-pointer transition-all duration-500 ease-out hover:text-teal-500 hover:font-semibold"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center bg-gray-100 transition-all duration-500 ease-out hover:border-teal-500">
-                    <FolderGit2 size={40} className="text-teal-500" />
-                  </div>
-                  <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
-                  <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">Projects</div>
-                </motion.div>
-              </Link>
+  <Link to="/projects">
+    <motion.div
+      className="group cursor-pointer mr-20"
+      whileHover={{ scale: 1.05, y: -8 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+        <FolderGit2 size={48} className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg" />
+        <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">Projects</span>
+      </div>
+    </motion.div>
+  </Link>
 
-              <Link to="/contact">
-                <motion.div
-                  className="cursor-pointer transition-all duration-500 ease-out hover:text-teal-500 hover:font-semibold"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.98 }}
-                >
-                  <div className="w-[200px] h-[100px] border-4 border-white rounded-xl flex justify-center items-center bg-gray-100 transition-all duration-500 ease-out hover:border-teal-500">
-                    <Pen size={40} className="text-teal-500" />
-                  </div>
-                  <ArrowFatLineDownIcon size={20} className="mx-auto mt-1" />
-                  <div className="bg-white rounded-xl px-6 py-3 text-base mt-1 text-center">Contact</div>
-                </motion.div>
-              </Link>
-            </div>
+  <Link to="/contact">
+    <motion.div
+      className="group cursor-pointer"
+      whileHover={{ scale: 1.05, y: -8 }}
+      whileTap={{ scale: 0.98 }}
+    >
+      <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+        <Pen size={48} className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg" />
+        <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">Contact</span>
+      </div>
+    </motion.div>
+  </Link>
+</div>
           </div>
         </section>
         <div>

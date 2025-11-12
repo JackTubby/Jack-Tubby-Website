@@ -13,7 +13,7 @@ const Nav = () => {
       <ul className="flex gap-x-8">
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/" className="relative inline-block py-1 group">
-            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600">
+            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
               Home
             </motion.span>
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
@@ -22,7 +22,7 @@ const Nav = () => {
 
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/about" className="relative inline-block py-1 group">
-            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600">
+            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
               About
             </motion.span>
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
@@ -31,7 +31,7 @@ const Nav = () => {
 
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/projects" className="relative inline-block py-1 group">
-            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600">
+            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
               Projects
             </motion.span>
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
@@ -40,7 +40,7 @@ const Nav = () => {
 
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/contact" className="relative inline-block py-1 group">
-            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600">
+            <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
               Contact
             </motion.span>
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
