@@ -2,7 +2,7 @@ import './App.css'
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import Nav from './components/Nav'
-import { ArrowFatLineDownIcon, CodeIcon, EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
+import { CodeIcon, EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
 import { FolderGit2, Pen, PersonStanding } from 'lucide-react'
 import { Link } from 'react-router-dom'
 
@@ -56,46 +56,61 @@ function App() {
             </p>
           </div>
           <div className="w-1/2">
-<div className="flex flex-col gap-y-8 justify-end items-end">
-  <Link to="/about">
-    <motion.div
-      className="group cursor-pointer"
-      whileHover={{ scale: 1.05, y: -8 }}
-      whileTap={{ scale: 0.98 }}
-    >
-      <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
-        <PersonStanding size={48} className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg" />
-        <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">About Me</span>
-      </div>
-    </motion.div>
-  </Link>
+            <div className="flex flex-col gap-y-8 justify-end items-end">
+              <Link to="/about">
+                <motion.div
+                  className="group cursor-pointer"
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+                    <PersonStanding
+                      size={48}
+                      className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                    />
+                    <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">
+                      About Me
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
 
-  <Link to="/projects">
-    <motion.div
-      className="group cursor-pointer mr-20"
-      whileHover={{ scale: 1.05, y: -8 }}
-      whileTap={{ scale: 0.98 }}
-    >
-      <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
-        <FolderGit2 size={48} className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg" />
-        <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">Projects</span>
-      </div>
-    </motion.div>
-  </Link>
+              <Link to="/projects">
+                <motion.div
+                  className="group cursor-pointer mr-20"
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+                    <FolderGit2
+                      size={48}
+                      className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                    />
+                    <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">
+                      Projects
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
 
-  <Link to="/contact">
-    <motion.div
-      className="group cursor-pointer"
-      whileHover={{ scale: 1.05, y: -8 }}
-      whileTap={{ scale: 0.98 }}
-    >
-      <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
-        <Pen size={48} className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg" />
-        <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">Contact</span>
-      </div>
-    </motion.div>
-  </Link>
-</div>
+              <Link to="/contact">
+                <motion.div
+                  className="group cursor-pointer"
+                  whileHover={{ scale: 1.05, y: -8 }}
+                  whileTap={{ scale: 0.98 }}
+                >
+                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+                    <Pen
+                      size={48}
+                      className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
+                    />
+                    <span className="text-lg font-semibold text-slate-700 group-hover:text-teal-500 transition-colors duration-500">
+                      Contact
+                    </span>
+                  </div>
+                </motion.div>
+              </Link>
+            </div>
           </div>
         </section>
         <div>
