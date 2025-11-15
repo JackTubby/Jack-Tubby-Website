@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Rate Guard",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis debitis quos?",
+    "image": "fallback-project-img.webp",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "link": "#"
+  },
+    {
+    "id": 2,
+    "name": "Must Read",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis debitis quos?",
+    "image": "fallback-project-img.webp",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "link": "#"
+  },
+    {
+    "id": 3,
+    "name": "Assembly Theory Life Simulator",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis debitis quos?",
+    "image": "fallback-project-img.webp",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "link": "#"
+  },
+    {
+    "id": 4,
+    "name": "Telegram Stock Tracker",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis debitis quos?",
+    "image": "fallback-project-img.webp",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "link": "#"
+  },
+    {
+    "id": 5,
+    "name": "Marine Anchor Catenary Calculator",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis debitis quos?",
+    "image": "fallback-project-img.webp",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "link": "#"
+  },
+    {
+    "id": 6,
+    "name": "HOA Management App",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident officiis debitis quos?",
+    "image": "fallback-project-img.webp",
+    "technologies": ["React", "TypeScript", "Tailwind CSS"],
+    "link": "#"
+  }
+]
