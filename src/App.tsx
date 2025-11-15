@@ -47,7 +47,7 @@ function App() {
         <section className="flex justify-between items-center min-h-[80vh]">
           <div className="w-1/2 flex flex-col gap-y-2">
             <h3 className="text-3xl cursor-default">Hello, I'm</h3>
-            <h2 className="font-lato text-9xl font-extrabold mb-4 cursor-default text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-500 to-cyan-600">
+            <h2 className="font-lato text-9xl font-extrabold mb-4 cursor-default text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600">
               Jack
             </h2>
             <p className="max-w-xl text-lg/loose cursor-default">
@@ -63,7 +63,7 @@ function App() {
                   whileHover={{ scale: 1.05, y: -8 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-linear-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
                     <PersonStanding
                       size={48}
                       className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
@@ -81,7 +81,7 @@ function App() {
                   whileHover={{ scale: 1.05, y: -8 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-linear-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
                     <FolderGit2
                       size={48}
                       className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
@@ -99,7 +99,7 @@ function App() {
                   whileHover={{ scale: 1.05, y: -8 }}
                   whileTap={{ scale: 0.98 }}
                 >
-                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-gradient-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
+                  <div className="w-[220px] h-[140px] border border-teal-500/20 rounded-2xl flex flex-col justify-center items-center gap-3 bg-linear-to-br from-white to-teal-50/50 backdrop-blur-sm transition-all duration-500 ease-out group-hover:border-teal-500/40 shadow-lg shadow-teal-500/10 group-hover:shadow-2xl group-hover:shadow-teal-500/30">
                     <Pen
                       size={48}
                       className="text-teal-500 transition-transform duration-500 group-hover:scale-110 drop-shadow-lg"
