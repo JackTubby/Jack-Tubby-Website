@@ -2,6 +2,7 @@ import '../App.css'
 import Nav from '../components/Nav'
 import { EnvelopeIcon, LinkedinLogoIcon, GithubLogoIcon } from '@phosphor-icons/react'
 import { Tooltip, TooltipContent, TooltipTrigger } from '../components/ui/tooltip'
+import { motion } from 'motion/react'
 
 function About() {
   const events = [
@@ -137,21 +138,25 @@ function About() {
             </div>
             <div>
               <ul className="flex gap-x-4">
-                <li className="relative flex flex-col items-center">
-                  <a href="#" className="hover:text-purple-600">
+                <motion.li
+                  className="relative flex flex-col items-center"
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a href="#" className="transition-all duration-500 ease-out hover:text-teal-500">
                     <EnvelopeIcon size={32} />
                   </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-600">
+                </motion.li>
+                <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
+                  <a href="#" className="transition-all duration-500 ease-out hover:text-teal-500">
                     <LinkedinLogoIcon size={32} />
                   </a>
-                </li>
-                <li>
-                  <a href="#" className="hover:text-purple-600">
+                </motion.li>
+                <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
+                  <a href="#" className="transition-all duration-500 ease-out hover:text-teal-500">
                     <GithubLogoIcon size={32} />
                   </a>
-                </li>
+                </motion.li>
               </ul>
             </div>
           </div>
@@ -165,7 +170,7 @@ function About() {
               {index !== events.length - 1 && <div className="absolute left-[15px] top-8 w-0.5 h-full bg-gray-300" />}
 
               {/* Dot */}
-              <div className="w-8 h-8 rounded-full bg-purple-600 flex-shrink-0 z-10" />
+              <div className="w-8 h-8 rounded-full bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 shrink-0 z-10 shadow-2xl" />
 
               {/* Content */}
               <div>

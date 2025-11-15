@@ -124,3 +124,10 @@
     /* Darker slate for better contrast */
   }
 }
+
+.card {
+  background-image: url('../public/fallback-project-img.webp');
+  background-size: cover;
+  background-position: center;
+  
+}
