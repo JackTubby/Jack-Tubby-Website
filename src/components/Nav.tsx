@@ -101,7 +101,7 @@ const Nav = () => {
 
         {/* Stronger shine effect */}
         <motion.div
-          className="absolute inset-0 bg-gradient-to-r from-transparent via-white/40 to-transparent -translate-x-full"
+          className="absolute inset-0 bg-linear-to-r from-transparent via-white/40 to-transparent -translate-x-full"
           variants={{
             initial: { x: '-100%', opacity: 0 },
             hover: {
@@ -120,7 +120,7 @@ const Nav = () => {
             hover: { scale: 1.05, transition: { duration: 0.3 } },
           }}
         >
-          Let's Talk
+          <Link to="/contact">Let's Talk</Link>
         </motion.span>
       </motion.a>
     </nav>
