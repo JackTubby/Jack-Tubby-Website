@@ -120,17 +120,17 @@ function App() {
               whileHover={{ scale: 1.15, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <a href="#" className="transition-all duration-500 ease-out hover:text-teal-500">
+              <Link to="/contact" className="transition-all duration-500 ease-out hover:text-teal-500">
                 <EnvelopeIcon size={32} />
-              </a>
+              </Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-              <a href="#" className="transition-all duration-500 ease-out hover:text-teal-500">
+              <a href="https://www.linkedin.com/in/jack-tubby-08334b1b2/" className="transition-all duration-500 ease-out hover:text-teal-500">
                 <LinkedinLogoIcon size={32} />
               </a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-              <a href="#" className="transition-all duration-500 ease-out hover:text-teal-500">
+              <a href="https://github.com/JackTubby" className="transition-all duration-500 ease-out hover:text-teal-500">
                 <GithubLogoIcon size={32} />
               </a>
             </motion.li>
