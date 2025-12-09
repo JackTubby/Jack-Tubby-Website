@@ -1,62 +1,68 @@
-import './App.css'
-import { useEffect, useState } from 'react'
-import { motion } from 'motion/react'
-import Nav from './components/Nav'
-import { CodeIcon, EnvelopeIcon, GithubLogoIcon, LinkedinLogoIcon } from '@phosphor-icons/react'
-import { FolderGit2, Pen, PersonStanding } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import "./App.css";
+import { useEffect, useState } from "react";
+import { motion } from "motion/react";
+import Nav from "./components/Nav";
+import {
+  CodeIcon,
+  EnvelopeIcon,
+  GithubLogoIcon,
+  LinkedinLogoIcon,
+} from "@phosphor-icons/react";
+import { FolderGit2, Pen, PersonStanding } from "lucide-react";
+import { Link } from "react-router-dom";
 
 function App() {
-  const [position, setPosition] = useState({ x: 100, y: 100 })
-  const [velocity, setVelocity] = useState({ x: 2, y: 2 })
-  const iconSize = 32
+  const [position, setPosition] = useState({ x: 100, y: 100 });
+  const [velocity, setVelocity] = useState({ x: 2, y: 2 });
+  const iconSize = 32;
 
   useEffect(() => {
     const animate = () => {
       setPosition((prev) => {
-        let newX = prev.x + velocity.x
-        let newY = prev.y + velocity.y
-        let newVelocityX = velocity.x
-        let newVelocityY = velocity.y
+        let newX = prev.x + velocity.x;
+        let newY = prev.y + velocity.y;
+        let newVelocityX = velocity.x;
+        let newVelocityY = velocity.y;
 
         if (newX <= 0 || newX >= window.innerWidth - iconSize) {
-          newVelocityX = -velocity.x
-          newX = newX <= 0 ? 0 : window.innerWidth - iconSize
+          newVelocityX = -velocity.x;
+          newX = newX <= 0 ? 0 : window.innerWidth - iconSize;
         }
         if (newY <= 0 || newY >= window.innerHeight - iconSize) {
-          newVelocityY = -velocity.y
-          newY = newY <= 0 ? 0 : window.innerHeight - iconSize
+          newVelocityY = -velocity.y;
+          newY = newY <= 0 ? 0 : window.innerHeight - iconSize;
         }
 
         if (newVelocityX !== velocity.x || newVelocityY !== velocity.y) {
-          setVelocity({ x: newVelocityX, y: newVelocityY })
+          setVelocity({ x: newVelocityX, y: newVelocityY });
         }
 
-        return { x: newX, y: newY }
-      })
-    }
+        return { x: newX, y: newY };
+      });
+    };
 
-    const interval = setInterval(animate, 16)
-    return () => clearInterval(interval)
-  }, [velocity])
+    const interval = setInterval(animate, 16);
+    return () => clearInterval(interval);
+  }, [velocity]);
 
   return (
     <>
-      <div className="min-h-screen max-w-[1200px] mx-auto relative">
+      <div className="min-h-screen container lg:max-w-[1200px] mx-auto relative px-2">
         <Nav />
-        <section className="flex justify-between items-center min-h-[80vh]">
-          <div className="w-1/2 flex flex-col gap-y-2">
+        <section className="flex flex-col lg:flex-row justify-between items-center min-h-[80vh] gap-8 lg:gap-0">
+          <div className="w-full lg:w-1/2 flex flex-col gap-y-2 items-center lg:items-start text-center lg:text-left">
             <h3 className="text-3xl cursor-default">Hello, I'm</h3>
-            <h2 className="font-lato text-9xl font-extrabold mb-4 cursor-default text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600">
+            <h2 className="font-lato text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-extrabold mb-4 cursor-default text-transparent bg-clip-text bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600">
               Jack
             </h2>
-            <p className="max-w-xl text-lg/loose cursor-default">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium ipsum earum ab adipisci nemo incidunt
-              vero, ex aliquid optio quaerat culpa facilis maiores quibusdam atque ea reiciendis nesciunt!
+            <p className="max-w-xl text-base sm:text-lg/loose cursor-default">
+              I'm a software developer who enjoys building things people
+              actually use. 4+ years of full-stack work across different
+              industries. Based in the UK.
             </p>
           </div>
-          <div className="w-1/2">
-            <div className="flex flex-col gap-y-8 justify-end items-end">
+          <div className="w-full lg:w-1/2">
+            <div className="flex flex-col gap-y-8 justify-center items-center lg:justify-end lg:items-end mt-8 lg:mt-0">
               <Link to="/about">
                 <motion.div
                   className="group cursor-pointer"
@@ -77,7 +83,7 @@ function App() {
 
               <Link to="/projects">
                 <motion.div
-                  className="group cursor-pointer mr-20"
+                  className="group cursor-pointer mr-0 lg:mr-20"
                   whileHover={{ scale: 1.05, y: -8 }}
                   whileTap={{ scale: 0.98 }}
                 >
@@ -120,17 +126,32 @@ function App() {
               whileHover={{ scale: 1.15, rotate: 5 }}
               whileTap={{ scale: 0.95 }}
             >
-              <Link to="/contact" className="transition-all duration-500 ease-out hover:text-teal-500">
+              <Link
+                to="/contact"
+                className="transition-all duration-500 ease-out hover:text-teal-500"
+              >
                 <EnvelopeIcon size={32} />
               </Link>
             </motion.li>
-            <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-              <a href="https://www.linkedin.com/in/jack-tubby-08334b1b2/" className="transition-all duration-500 ease-out hover:text-teal-500">
+            <motion.li
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a
+                href="https://www.linkedin.com/in/jack-tubby-08334b1b2/"
+                className="transition-all duration-500 ease-out hover:text-teal-500"
+              >
                 <LinkedinLogoIcon size={32} />
               </a>
             </motion.li>
-            <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-              <a href="https://github.com/JackTubby" className="transition-all duration-500 ease-out hover:text-teal-500">
+            <motion.li
+              whileHover={{ scale: 1.15, rotate: 5 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              <a
+                href="https://github.com/JackTubby"
+                className="transition-all duration-500 ease-out hover:text-teal-500"
+              >
                 <GithubLogoIcon size={32} />
               </a>
             </motion.li>
@@ -138,10 +159,10 @@ function App() {
         </div>
         <motion.div
           style={{
-            position: 'fixed',
+            position: "fixed",
             left: position.x,
             top: position.y,
-            pointerEvents: 'none',
+            pointerEvents: "none",
             zIndex: -1,
           }}
           className="text-teal-500"
@@ -150,7 +171,7 @@ function App() {
         </motion.div>
       </div>
     </>
-  )
+  );
 }
 
-export default App
+export default App;

@@ -1,34 +1,42 @@
-import '../App.css'
-import Nav from '../components/Nav'
-import { EnvelopeIcon, LinkedinLogoIcon, GithubLogoIcon } from '@phosphor-icons/react'
-import { Tooltip, TooltipContent, TooltipTrigger } from '../components/ui/tooltip'
-import { motion } from 'motion/react'
-import { Link } from 'react-router-dom'
+import "../App.css";
+import Nav from "../components/Nav";
+import {
+  EnvelopeIcon,
+  LinkedinLogoIcon,
+  GithubLogoIcon,
+} from "@phosphor-icons/react";
+import {
+  Tooltip,
+  TooltipContent,
+  TooltipTrigger,
+} from "../components/ui/tooltip";
+import { motion } from "motion/react";
+import { Link } from "react-router-dom";
 
 function About() {
   const events = [
     {
-      year: '2023 - Current',
-      title: 'Software Developer',
-      company: 'Convertoo / Investoo',
+      year: "2023 - Current",
+      title: "Software Developer",
+      company: "Convertoo / Investoo",
       description:
-        "At Convertoo, I work across current and legacy codebases to enhance and maintain functionality. During a significant company restructure, I contributed to new projects supporting the team's evolving needs. As I grew in the role, I took on key responsibilities including integrating new partners, managing core APIs, and developing tools to improve the team's daily workflow.",
+        "I work across a mix of modern and legacy codebases, building internal tools and keeping systems running smoothly. Over time I've taken on more ownership - handling partner integrations, looking after core APIs, and building things that make the team's day-to-day easier.",
     },
     {
-      year: '2022 - 2023',
-      title: 'Software Developer',
-      company: 'Freelance',
+      year: "2022 - Current",
+      title: "Software Developer",
+      company: "Freelance",
       description:
-        'I worked with various local clients to develop their websites and internal systems, providing tailored solutions to meet their needs.',
+        "Working with a handful of clients on full-stack projects - websites, internal tools, whatever they need. Good experience in owning things end-to-end, from the first conversation to getting it live.",
     },
     {
-      year: '2021 - 2022',
-      title: 'Developer',
-      company: 'Global Block',
+      year: "2021 - 2022",
+      title: "Developer",
+      company: "Global Block",
       description:
-        'At Global Block, I developed internal tools and coordinated with external development teams across different countries. My primary focus was creating tools to support the in-house finance team and reduce company-wide reporting time.',
+        "Helped build a consumer trading platform, mostly focused on internal tooling and integrations. Worked with teams across different countries and spent a lot of time making life easier for the finance team through better reporting tools.",
     },
-  ]
+  ];
   return (
     <div className="min-h-screen max-w-[1200px] mx-auto">
       <Nav />
@@ -39,16 +47,18 @@ function About() {
               src={`${import.meta.env.BASE_URL}me.png`}
               alt="Jack Tubby Avatar"
               className="border-4 border-white rounded-xl"
-            />{' '}
+            />{" "}
           </div>
           <div className="flex flex-col gap-y-2">
             <h1 className="mb-4 text-3xl">About Me</h1>
             <h5 className="font-semibold text-lg">Jack Tubby</h5>
             <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus porro, tempora sapiente aliquam harum
-              itaque architecto officiis, hic beatae assumenda mollitia doloribus quos dignissimos quo voluptas vero at
-              impedit neque maxime. Ea, tenetur. Suscipit debitis corporis voluptate mollitia cum, non amet hic. Eaque
-              culpa odit alias, veritatis aliquam doloribus beatae.
+              Developer based in the UK with a background in full-stack web
+              development. I've built trading systems, client projects, and
+              internal tools used across multiple teams. I'm most comfortable
+              working with TypeScript, Node.js, and React, but I pick up
+              whatever the project needs. I like building things that work and
+              fixing things that don't.
             </p>
             <h5 className="font-semibold text-lg">Technologies I work with</h5>
             <div className="flex gap-x-2 mb-2">
@@ -144,17 +154,35 @@ function About() {
                   whileHover={{ scale: 1.15, rotate: 5 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  <Link to="/contact" className="transition-all duration-500 ease-out hover:text-teal-500">
+                  <Link
+                    to="/contact"
+                    className="transition-all duration-500 ease-out hover:text-teal-500"
+                    target="_"
+                  >
                     <EnvelopeIcon size={32} />
                   </Link>
                 </motion.li>
-                <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-                  <a href="https://www.linkedin.com/in/jack-tubby-08334b1b2/" className="transition-all duration-500 ease-out hover:text-teal-500">
+                <motion.li
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a
+                    href="https://www.linkedin.com/in/jack-tubby-08334b1b2/"
+                    className="transition-all duration-500 ease-out hover:text-teal-500"
+                    target="_"
+                  >
                     <LinkedinLogoIcon size={32} />
                   </a>
                 </motion.li>
-                <motion.li whileHover={{ scale: 1.15, rotate: 5 }} whileTap={{ scale: 0.95 }}>
-                  <a href="https://github.com/JackTubby" className="transition-all duration-500 ease-out hover:text-teal-500">
+                <motion.li
+                  whileHover={{ scale: 1.15, rotate: 5 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  <a
+                    href="https://github.com/JackTubby"
+                    className="transition-all duration-500 ease-out hover:text-teal-500"
+                    target="_"
+                  >
                     <GithubLogoIcon size={32} />
                   </a>
                 </motion.li>
@@ -168,7 +196,9 @@ function About() {
           {events.map((event, index) => (
             <div key={index} className="flex gap-6 mb-8 relative">
               {/* Line */}
-              {index !== events.length - 1 && <div className="absolute left-[15px] top-8 w-0.5 h-full bg-gray-300" />}
+              {index !== events.length - 1 && (
+                <div className="absolute left-[15px] top-8 w-0.5 h-full bg-gray-300" />
+              )}
 
               {/* Dot */}
               <div className="w-8 h-8 rounded-full bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 shrink-0 z-10 shadow-2xl" />
@@ -185,6 +215,6 @@ function About() {
         </div>
       </section>
     </div>
-  )
+  );
 }
-export default About
+export default About;

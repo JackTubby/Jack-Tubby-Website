@@ -1,7 +1,10 @@
 import { motion } from 'motion/react'
 import { Link } from 'react-router-dom'
+import { Menu, X } from 'lucide-react'
+import { useState } from 'react'
 
 const Nav = () => {
+  const [menuOpen, setMenuOpen] = useState(false)
   return (
     <nav className="flex justify-between items-center py-8">
       <Link to="/" className="relative inline-block text-lg font-bold py-1 group">
@@ -10,7 +13,9 @@ const Nav = () => {
         </span>
         <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
       </Link>
-      <ul className="flex gap-x-8">
+      {/* Desktop nav */}
+      <ul className="hidden md:flex gap-x-8">
+        {/* ...existing code for desktop nav items... */}
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/" className="relative inline-block py-1 group">
             <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
@@ -19,7 +24,6 @@ const Nav = () => {
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
           </Link>
         </motion.li>
-
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/about" className="relative inline-block py-1 group">
             <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
@@ -28,7 +32,6 @@ const Nav = () => {
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
           </Link>
         </motion.li>
-
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/projects" className="relative inline-block py-1 group">
             <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
@@ -37,7 +40,6 @@ const Nav = () => {
             <span className="absolute -bottom-1 left-0 h-0.5 w-0 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out group-hover:w-full" />
           </Link>
         </motion.li>
-
         <motion.li whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="py-2">
           <Link to="/contact" className="relative inline-block py-1 group">
             <motion.span className="transition-all duration-500 ease-out group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-linear-to-r group-hover:from-emerald-400 group-hover:via-teal-500 group-hover:to-cyan-600 font-semibold">
@@ -47,9 +49,65 @@ const Nav = () => {
           </Link>
         </motion.li>
       </ul>
+      {/* Mobile nav */}
+      <div className="md:hidden relative">
+        <button
+          aria-label={menuOpen ? 'Close menu' : 'Open menu'}
+          className="p-2 rounded-lg focus:outline-none focus:ring-2 focus:ring-teal-500"
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          {menuOpen ? <X size={32} className="text-teal-500" /> : <Menu size={32} className="text-teal-500" />}
+        </button>
+        {menuOpen && (
+          <motion.ul
+            initial={{ opacity: 0, y: -10 }}
+            animate={{ opacity: 1, y: 0 }}
+            exit={{ opacity: 0, y: -10 }}
+            className="absolute right-0 mt-2 w-40 bg-white rounded-xl shadow-lg border border-teal-100 z-50 flex flex-col"
+          >
+            <li>
+              <Link
+                to="/"
+                className="block px-4 py-3 text-teal-700 hover:bg-teal-50 rounded-t-xl"
+                onClick={() => setMenuOpen(false)}
+              >
+                Home
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/about"
+                className="block px-4 py-3 text-teal-700 hover:bg-teal-50"
+                onClick={() => setMenuOpen(false)}
+              >
+                About
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/projects"
+                className="block px-4 py-3 text-teal-700 hover:bg-teal-50"
+                onClick={() => setMenuOpen(false)}
+              >
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/contact"
+                className="block px-4 py-3 text-teal-700 hover:bg-teal-50 rounded-b-xl"
+                onClick={() => setMenuOpen(false)}
+              >
+                Contact
+              </Link>
+            </li>
+          </motion.ul>
+        )}
+      </div>
+      {/* ...existing code for Let's Talk button... */}
       <motion.a
         href="#"
-        className="relative px-8 py-3 text-lg font-semibold text-white rounded-2xl overflow-hidden inline-block cursor-pointer"
+        className="relative px-8 py-3 text-lg font-semibold text-white rounded-2xl overflow-hidden inline-block cursor-pointer hidden md:inline-block"
         initial="initial"
         whileHover="hover"
         whileTap={{ scale: 0.95 }}
@@ -66,7 +124,6 @@ const Nav = () => {
             },
           }}
         />
-
         {/* Glass overlay - gets clearer on hover */}
         <motion.div
           className="absolute inset-0"
@@ -82,7 +139,6 @@ const Nav = () => {
             },
           }}
         />
-
         {/* Animated border glow */}
         <motion.div
           className="absolute inset-0 rounded-2xl border-2"
@@ -98,7 +154,6 @@ const Nav = () => {
             },
           }}
         />
-
         {/* Stronger shine effect */}
         <motion.div
           className="absolute inset-0 bg-linear-to-r from-transparent via-white/40 to-transparent -translate-x-full"
@@ -111,7 +166,6 @@ const Nav = () => {
             },
           }}
         />
-
         {/* Text with scale effect */}
         <motion.span
           className="relative z-10 drop-shadow-lg inline-block"

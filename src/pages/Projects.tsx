@@ -12,27 +12,29 @@ function Projects() {
           <div className="w-full h-[400px] flex gap-x-6">
             {/* CARD ONE */}
             <div className="w-1/2 border h-[400px] rounded-2xl relative card">
-              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl">
+              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl w-[90%]">
                 <h5 className="text-lg text-white font-semibold">Rate Guard</h5>
                 <p className="text-sm text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident officiis debitis quos?
+                  A TypeScript rate limiting middleware for Express.js. Supports
+                  memory and Redis storage, multiple algorithms supported.
                 </p>
-                <button className="cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out">
+                <a
+                  href="https://github.com/JackTubby/rate-guard"
+                  className="text-center cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out"
+                >
                   Learn More
-                </button>
+                </a>
               </div>
             </div>
             {/* CARD TWO */}
             <div className="w-1/2 border h-[400px] rounded-2xl relative card">
-              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl">
+              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl w-[90%]">
                 <h5 className="text-lg text-white font-semibold">Must Read</h5>
                 <p className="text-sm text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident officiis debitis quos?
+                  Release soon...
                 </p>
-                <button className="cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out">
-                  Learn More
+                <button className="cursor-not-allowed text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-gray-400 via-gray-500 to-gray-600 transition-all duration-500 ease-out">
+                  In Development
                 </button>
               </div>
             </div>
@@ -40,55 +42,59 @@ function Projects() {
           <div className="w-full max-h-[600px] flex gap-x-6">
             {/* CARD THREE */}
             <div className="w-1/3 border h-[600px] rounded-2xl relative card">
-              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl">
-                <h5 className="text-lg text-white font-semibold">Assembly Theory Life Simulator</h5>
+              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl w-[90%]">
+                <h5 className="text-lg text-white font-semibold">
+                  Assembly Theory Life Simulator
+                </h5>
                 <p className="text-sm text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident officiis debitis quos?
+                  In progress...
                 </p>
-                <button className="cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out">
-                  Learn More
+                <button className="cursor-not-allowed text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-gray-400 via-gray-500 to-gray-600 transition-all duration-500 ease-out">
+                  In Development
                 </button>
               </div>
             </div>
             <div className="w-1/3 max-h-[600px] flex flex-col gap-y-6">
               {/* CARD FOUR */}
               <div className="h-[300px] border rounded-2xl relative card">
-                <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl">
-                  <h5 className="text-lg text-white font-semibold">Telegram Stock Tracker</h5>
+                <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl w-[90%]">
+                  <h5 className="text-lg text-white font-semibold">
+                    Telegram Stock Tracker
+                  </h5>
                   <p className="text-sm text-white">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident officiis debitis quos?
+                    In progress...
                   </p>
-                  <button className="cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out">
-                    Learn More
+                  <button className="cursor-not-allowed text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-gray-400 via-gray-500 to-gray-600 transition-all duration-500 ease-out">
+                    In Development
                   </button>
                 </div>
               </div>
               {/* CARD FIVE */}
               <div className="h-[300px] border rounded-2xl relative card">
-                <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl">
-                  <h5 className="text-lg text-white font-semibold">Marine Anchor Catenary Calculator</h5>
+                <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl w-[90%]">
+                  <h5 className="text-lg text-white font-semibold">
+                    Marine Anchor Catenary Calculator
+                  </h5>
                   <p className="text-sm text-white">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Provident officiis debitis quos?
+                    In progress...
                   </p>
-                  <button className="cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out">
-                    Learn More
+                  <button className="cursor-not-allowed text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-gray-400 via-gray-500 to-gray-600 transition-all duration-500 ease-out">
+                    In Development
                   </button>
                 </div>
               </div>
             </div>
             {/* CARD SIX */}
             <div className="w-1/3 border h-[600px] rounded-2xl relative card">
-              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl">
-                <h5 className="text-lg text-white font-semibold">HOA Management App</h5>
+              <div className="absolute bottom-2 left-2 flex flex-col gap-y-2 bg-black/40 backdrop-blur-md p-4 rounded-xl w-[90%]">
+                <h5 className="text-lg text-white font-semibold">
+                  HOA Management App
+                </h5>
                 <p className="text-sm text-white">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                  Provident officiis debitis quos?
+                  In progress...
                 </p>
-                <button className="cursor-pointer text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 transition-all duration-500 ease-out">
-                  Learn More
+                <button className="cursor-not-allowed text-white rounded-2xl px-4 py-1 max-w-1/2 bg-linear-to-r from-gray-400 via-gray-500 to-gray-600 transition-all duration-500 ease-out">
+                  In Development
                 </button>
               </div>
             </div>
