@@ -57,8 +57,9 @@ function App() {
             </h2>
             <p className="max-w-xl text-base sm:text-lg/loose cursor-default">
               I'm a software developer who enjoys building things people
-              actually use. 4+ years of full-stack work across different
-              industries. Based in the UK.
+              actually use. <br />
+              Over 4 years of full-stack work across different industries.{" "}
+              <br /> Based in the UK.
             </p>
           </div>
           <div className="w-full lg:w-1/2">
