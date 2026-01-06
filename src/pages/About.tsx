@@ -38,10 +38,10 @@ function About() {
     },
   ];
   return (
-    <div className="min-h-screen max-w-[1200px] mx-auto">
+    <div className="min-h-screen max-w-[1200px] mx-auto px-4 md:px-0">
       <Nav />
       <section>
-        <div className="flex items-center gap-x-8">
+        <div className="flex flex-col md:flex-row items-center gap-8">
           <div>
             <img
               src={`${import.meta.env.BASE_URL}me.png`}
@@ -49,7 +49,7 @@ function About() {
               className="border-4 border-white rounded-xl"
             />{" "}
           </div>
-          <div className="flex flex-col gap-y-2">
+          <div className="flex flex-col gap-y-2 text-center md:text-left items-center md:items-start">
             <h1 className="mb-4 text-3xl">About Me</h1>
             <h5 className="font-semibold text-lg">Jack Tubby</h5>
             <p>
@@ -61,7 +61,7 @@ function About() {
               fixing things that don't.
             </p>
             <h5 className="font-semibold text-lg">Technologies I work with</h5>
-            <div className="flex gap-x-2 mb-2">
+            <div className="flex flex-wrap gap-2 mb-2">
               <Tooltip>
                 <TooltipTrigger>
                   <i className="devicon-typescript-plain text-4xl"></i>
@@ -148,7 +148,7 @@ function About() {
               </Tooltip>
             </div>
             <div>
-              <ul className="flex gap-x-4">
+              <ul className="flex gap-x-4 justify-center md:justify-start">
                 <motion.li
                   className="relative flex flex-col items-center"
                   whileHover={{ scale: 1.15, rotate: 5 }}

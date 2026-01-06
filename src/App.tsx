@@ -120,8 +120,8 @@ function App() {
             </div>
           </div>
         </section>
-        <div>
-          <ul className="flex gap-x-4">
+        <div className="mt-8">
+          <ul className="flex gap-x-4 justify-center lg:justify-start">
             <motion.li
               className="relative flex flex-col items-center"
               whileHover={{ scale: 1.15, rotate: 5 }}

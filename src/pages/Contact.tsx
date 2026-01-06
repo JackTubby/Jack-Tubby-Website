@@ -3,10 +3,10 @@ import Nav from "../components/Nav";
 
 function Contact() {
   return (
-    <div className="min-h-screen max-w-[1200px] mx-auto">
+    <div className="min-h-screen max-w-[1200px] mx-auto px-4 md:px-0">
       <Nav />
       <section className="flex items-center justify-center mx-auto">
-        <div className="w-1/2 my-12 rounded-2xl bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 p-1 shadow-xl">
+        <div className="w-full md:w-1/2 my-12 rounded-2xl bg-linear-to-r from-emerald-400 via-teal-500 to-cyan-600 p-1 shadow-xl">
           <div className="rounded-2xl bg-white p-8 text-center flex flex-col gap-y-6">
             <h1 className="font-semibold text-3xl">Contact Me</h1>
             <p className="mt-4 text-base sm:text-lg/loose cursor-default">
