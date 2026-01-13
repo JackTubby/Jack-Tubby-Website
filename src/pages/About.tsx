@@ -13,8 +13,12 @@ import {
 import { motion } from "motion/react";
 import { Link } from "react-router-dom";
 
+type Tech = { name: string; icon: string }[];
+type Project = { company: string; brief: string };
+type Event = { year: string; title: string; company: string; description: string; projects?: Project[] };
+
 function About() {
-  const events = [
+  const events: Event[] = [
     {
       year: "2023 - Current",
       title: "Software Developer",
@@ -28,6 +32,12 @@ function About() {
       company: "Freelance",
       description:
         "Working with a handful of clients on full-stack projects - websites, internal tools, whatever they need. Good experience in owning things end-to-end, from the first conversation to getting it live.",
+      projects: [
+        { company: "Conduitfp", brief: "Website and technical infrastructure setup" },
+        { company: "TrueHOA", brief: "HOA management platform with anonymous, auditable elections and resident proposals" },
+        { company: "Bomi", brief: "Marketing platform connecting florists across the USA with customers on major delivery apps" },
+        { company: "Pixel Code Co.", brief: "Working on a wide range of open-source and private projects" },
+      ],
     },
     {
       year: "2021 - 2022",
@@ -36,6 +46,39 @@ function About() {
       description:
         "Helped build a consumer trading platform, mostly focused on internal tooling and integrations. Worked with teams across different countries and spent a lot of time making life easier for the finance team through better reporting tools.",
     },
+  ];
+
+  const currentTech: Tech = [
+    { name: "TypeScript", icon: "devicon-typescript-plain" },
+    { name: "NodeJS", icon: "devicon-nodejs-plain-wordmark" },
+    { name: "GCP", icon: "devicon-googlecloud-plain" },
+    { name: "Digital Ocean", icon: "devicon-digitalocean-original-wordmark" },
+    { name: "Git", icon: "devicon-git-plain" },
+    { name: "GitHub", icon: "devicon-github-original" },
+    { name: "Postgres", icon: "devicon-postgresql-plain" },
+    { name: "Jest", icon: "devicon-jest-plain" },
+    { name: "Tailwind", icon: "devicon-tailwindcss-original" },
+    { name: "React", icon: "devicon-react-original" },
+    { name: "Python", icon: "devicon-python-plain" },
+    { name: "Cloudflare", icon: "devicon-cloudflare-plain" },
+    { name: "Supabase", icon: "devicon-supabase-plain" },
+  ];
+  const excitedTech: Tech = [
+    { name: "Go", icon: "devicon-go-original-wordmark" },
+    { name: "Ghostty", icon: "" },
+    { name: "Omarchy", icon: "" },
+    { name: "D3js", icon: "devicon-d3js-plain" },
+    { name: "GTK4", icon: "" },
+  ];
+  const previousTech: Tech = [
+    { name: "PHP", icon: "devicon-php-plain" },
+    { name: "Prisma", icon: "devicon-prisma-original-wordmark" },
+    { name: "WordPress", icon: "devicon-wordpress-plain" },
+    { name: "Heroku", icon: "devicon-heroku-original" },
+    { name: "MongoDB", icon: "devicon-mongodb-plain" },
+    { name: "Chakra UI", icon: "devicon-chakraui-plain" },
+    { name: "Django", icon: "devicon-django-plain" },
+    { name: "Flask", icon: "devicon-flask-original" },
   ];
   return (
     <div className="min-h-screen max-w-[1200px] mx-auto px-4 md:px-0">
@@ -60,93 +103,61 @@ function About() {
               whatever the project needs. I like building things that work and
               fixing things that don't.
             </p>
-            <h5 className="font-semibold text-lg">Technologies I work with</h5>
-            <div className="flex flex-wrap gap-2 mb-2">
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-typescript-plain text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>TypeScript</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-php-plain text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>PHP</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-go-original-wordmark text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Go</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-nodejs-plain-wordmark text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Node.js</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-googlecloud-plain text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Google Cloud</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-digitalocean-original-wordmark text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>DigitalOcean</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-git-plain text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Git</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-github-original text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>GitHub</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-prisma-original-wordmark text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Prisma</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-mysql-plain-wordmark text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>MySQL</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-postgresql-plain text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>PostgreSQL</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-jest-plain text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Jest</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-tailwindcss-original text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>Tailwind CSS</TooltipContent>
-              </Tooltip>
-              <Tooltip>
-                <TooltipTrigger>
-                  <i className="devicon-react-original text-4xl"></i>
-                </TooltipTrigger>
-                <TooltipContent>React</TooltipContent>
-              </Tooltip>
+
+            <h5 className="font-semibold text-lg">What I'm working with</h5>
+            <div className="flex flex-wrap gap-3 mb-2">
+              {currentTech.map((tech) => (
+                <Tooltip key={tech.name}>
+                  <TooltipTrigger>
+                    {tech.icon ? (
+                      <i className={`${tech.icon} text-4xl`}></i>
+                    ) : (
+                      <span className="text-sm font-medium px-2 py-1 bg-gray-100 rounded">
+                        {tech.name}
+                      </span>
+                    )}
+                  </TooltipTrigger>
+                  <TooltipContent>{tech.name}</TooltipContent>
+                </Tooltip>
+              ))}
             </div>
+
+            <h5 className="font-semibold text-lg">What I'm exploring</h5>
+            <div className="flex flex-wrap gap-3 mb-2">
+              {excitedTech.map((tech) => (
+                <Tooltip key={tech.name}>
+                  <TooltipTrigger>
+                    {tech.icon ? (
+                      <i className={`${tech.icon} text-4xl`}></i>
+                    ) : (
+                      <span className="text-sm font-medium px-2 py-1 bg-gray-100 rounded">
+                        {tech.name}
+                      </span>
+                    )}
+                  </TooltipTrigger>
+                  <TooltipContent>{tech.name}</TooltipContent>
+                </Tooltip>
+              ))}
+            </div>
+
+            <h5 className="font-semibold text-lg">What I've used before</h5>
+            <div className="flex flex-wrap gap-3 mb-4">
+              {previousTech.map((tech) => (
+                <Tooltip key={tech.name}>
+                  <TooltipTrigger>
+                    {tech.icon ? (
+                      <i className={`${tech.icon} text-4xl`}></i>
+                    ) : (
+                      <span className="text-sm font-medium px-2 py-1 bg-gray-100 rounded">
+                        {tech.name}
+                      </span>
+                    )}
+                  </TooltipTrigger>
+                  <TooltipContent>{tech.name}</TooltipContent>
+                </Tooltip>
+              ))}
+            </div>
+
             <div>
               <ul className="flex gap-x-4 justify-center md:justify-start">
                 <motion.li
@@ -209,6 +220,19 @@ function About() {
                 <h3 className="text-xl font-bold">{event.title}</h3>
                 <p className="text-gray-600">{event.company}</p>
                 <p className="mt-2">{event.description}</p>
+                {event.projects && event.projects.length > 0 && (
+                  <div className="mt-3">
+                    <p className="text-sm font-semibold text-gray-700 mb-2">Clients</p>
+                    <ul className="space-y-1">
+                      {event.projects.map((project, i) => (
+                        <li key={i} className="text-sm">
+                          <span className="font-medium">{project.company}</span>
+                          <span className="text-gray-500"> — {project.brief}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
               </div>
             </div>
           ))}
